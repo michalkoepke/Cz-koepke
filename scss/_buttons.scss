@@ -1,0 +1,29 @@
+@import 'config';
+
+%btn {
+    display: inline-block;
+    padding: 8px 20px;
+    margin: 3px;
+    &:hover {
+        background-color: $grey-lighter3;
+        color: $grey-darker3;
+    }
+    a {
+        color: $grey-darker3;
+        font-family: $font-stack;
+
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: $accent;
+
+}
+    
+
+.btn-secondary {
+    @extend %btn;
+    background-color: $grey-lighter2;
+    
+}
