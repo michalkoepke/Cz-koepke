@@ -22,9 +22,8 @@ h6 {
   font-weight: 400;
 }
 
-
 p1 {
-  @include laptops-p1
+  @include laptops-p1;
 }
 
 h1 {
@@ -54,13 +53,14 @@ body {
     width: 70%;
     margin: 0 auto;
     display: flex;
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     h1 {
-      padding: 0;
+      padding-top: 3rem;
+      padding-bottom: 4rem;
     }
     div {
       // margin-top: 2rem;
@@ -104,6 +104,7 @@ body {
               h1 {
                 color: $grey-lighter3;
                 font-size: 1.3rem;
+                padding: 0;
               }
             }
 
@@ -195,6 +196,7 @@ body {
 .card-showcase {
   @extend %card;
   padding: 2rem;
+  margin: 2rem 0;
   justify-content: center;
   align-items: center;
   background-color: $grey-darker2;
@@ -243,7 +245,9 @@ body {
 
   .cards-all {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-evenly;
+    @include for-tablet-down-cards;
   }
 }
 .showcase-top {
@@ -353,12 +357,7 @@ nav {
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
-    background: rgb(19, 25, 28);
-    background: -moz-linear-gradient(308deg, rgba(19, 25, 28, 1) 0%, rgba(38, 50, 56, 1) 100%);
-    background: -webkit-linear-gradient(308deg, rgba(19, 25, 28, 1) 0%, rgba(38, 50, 56, 1) 100%);
-    background: linear-gradient(308deg, rgba(19, 25, 28, 1) 0%, rgba(38, 50, 56, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#13191c",endColorstr="#263238",GradientType=1);
-    // background-color: $grey-darker4;
+    background-color: $grey-darker3;
     padding: 0rem;
 
     .header-wrapper {
@@ -379,7 +378,7 @@ nav {
     div {
       display: flex;
       flex-direction: row;
-      align-content: center;
+      justify-content: space-around;
       padding: 6rem 0;
       ul {
         list-style: square;
@@ -401,9 +400,12 @@ nav {
         }
       }
 
-      svg {
-        width: 300px;
-        margin: 0 auto;
+      .did-grafika {
+        padding: 0;
+        svg {
+          width: 300px;
+          // margin: 0 auto;
+        }
       }
     }
 
@@ -418,12 +420,15 @@ nav {
     i {
       color: $accent;
       text-align: center;
+      display: block;
     }
   }
+
   .wrapper-did {
     @include for-laptop-landscape-down;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: 70%;
     margin: 0 auto;
     margin-bottom: 4rem;
@@ -441,7 +446,7 @@ nav {
       text-align: left;
       font-size: 1rem;
       // border-spacing: 3px;
-      margin-top: 2rem;
+      margin: 2rem 0;
       box-shadow: 10px 10px 35px 0px rgba(0, 0, 0, 0.08);
 
       tr {
@@ -492,64 +497,62 @@ nav {
   background-color: $grey-darker3;
   .footer-wrap {
     @include for-laptop-landscape-down;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     color: $grey-lighter1;
     display: flex;
     flex-flow: row wrap;
-    align-items: space-between;
+    align-items: flex-start;
     justify-content: space-between;
     @include footer-1400;
 
     .footer-left {
-      
-        color: $grey-lighter1;
-        display: flex;
-        padding: 0;
-        width: 350px;
-        svg {
-          height: 40px;
-          display: inline-block;
-          margin-top: 5px;
-        }
-        h1 {
-          display: inline;
-        }
-      
+      color: $accent;
+      display: flex;
+      padding-bottom: 3rem;
+      width: 350px;
+      svg {
+        height: 40px;
+        display: inline-block;
+        margin-top: 5px;
+      }
+      h1 {
+        display: inline;
+      }
     }
 
     .footer-contact {
-      @include form1400;
       
       width: 400px;
       // height: 300px;
       // background-color: $grey-lighter2;
       color: $grey-lighter1;
       margin-top: 5px;
-
+      @include form1400;
+      
       h2 {
-        color: $grey-lighter1;
+        color: $accent;
       }
 
       #formularz {
         font-family: $font-stack;
         input {
-          width: 100%;
+          width: 400px;
           font-size: 1rem;
           font-family: $font-stack;
           background-color: $grey;
-          color: $grey-lighter1;
+          color: $grey-lighter1-5;
           border-style: none;
           padding: 0.5rem;
           margin-bottom: 5px;
+          @include form1400;
           &:focus {
             outline: none;
           }
-          
-        
         }
 
         .sub {
+          // margin-top: 3px;
           width: 30%;
           color: $grey-lighter1-5;
           &:hover {
@@ -557,8 +560,6 @@ nav {
             color: $grey-darker3;
           }
         }
-
-
 
         textarea {
           color: $grey-lighter1-5;
@@ -568,7 +569,9 @@ nav {
           padding: 1rem;
           text-decoration: none;
           resize: none;
-          width: 100%;
+          width: 400px;
+          margin-bottom: 2px;
+          @include form1400;
           &:focus {
             outline: none;
           }
@@ -583,10 +586,9 @@ nav {
       color: $grey-lighter1;
       margin-top: 5px;
       margin-left: 25px;
-      
 
       h2 {
-        color: $grey-lighter1;
+        color: $accent;
       }
 
       ul {
@@ -607,9 +609,6 @@ nav {
           }
         }
       }
-
-
     }
-
   }
 }
