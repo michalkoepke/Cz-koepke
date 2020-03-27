@@ -108,6 +108,28 @@ html {
   border-width: 1px;
 }
 
+html {
+  font-size: 100%;
+}
+
+@media only screen and (max-width: 1400px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -164,9 +186,15 @@ body {
           align-items: center;
 }
 
-@media (max-width: 1400px) {
+@media only screen and (max-width: 1400px) {
   #grants .wrapper-grants {
-    width: 85%;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #grants .wrapper-grants {
+    width: 90%;
   }
 }
 
@@ -193,11 +221,32 @@ body {
           align-items: flex-start;
 }
 
+@media only screen and (max-width: 900px) {
+  #grants .wrapper-grants div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
 #grants .wrapper-grants div ul {
   color: #13191c;
   width: 500px;
   list-style: none;
   margin: 0px 15px;
+}
+
+@media only screen and (max-width: 900px) {
+  #grants .wrapper-grants div ul {
+    width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    height: auto;
+  }
 }
 
 #grants .wrapper-grants div ul li {
@@ -225,6 +274,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -305,7 +358,7 @@ body {
 
 #lab .left-big .lab-header h1 {
   color: #ff9800;
-  padding: 0 0.5rem;
+  padding: 3rem 0.5rem;
 }
 
 #lab .left-big .lab-content {
@@ -378,6 +431,21 @@ body {
   height: 300px;
 }
 
+@media only screen and (max-width: 1400px) {
+  .card-showcase {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .card-showcase svg {
   height: 75px;
 }
@@ -434,7 +502,7 @@ body {
 .wrapper-cards h1 {
   color: #ff9800;
   text-align: center;
-  margin-bottom: 30px;
+  margin: 1rem;
 }
 
 .wrapper-cards .cards-all {
@@ -448,23 +516,6 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-
-@media (max-width: 800px) {
-  .wrapper-cards .cards-all {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
 }
 
 .showcase-top {
@@ -505,6 +556,10 @@ nav .nav-inside ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   list-style: none;
 }
 
@@ -624,6 +679,18 @@ nav .nav-inside li a:hover {
   padding: 6rem 0;
 }
 
+@media only screen and (max-width: 900px) {
+  #didactics .header-background div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 #didactics .header-background div ul {
   list-style: square;
   color: #eceff1;
@@ -650,11 +717,18 @@ nav .nav-inside li a:hover {
 }
 
 #didactics .header-background div .did-grafika {
-  padding: 0;
+  padding: 0 3rem;
 }
 
 #didactics .header-background div .did-grafika svg {
   width: 300px;
+}
+
+@media only screen and (max-width: 900px) {
+  #didactics .header-background div .did-grafika svg {
+    width: 250px;
+    padding-top: 6rem;
+  }
 }
 
 #didactics .header-background .center {
@@ -789,18 +863,22 @@ nav .nav-inside li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 3rem;
   width: 350px;
 }
 
 #footer .footer-wrap .footer-left svg {
-  height: 40px;
+  height: 3rem;
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 0.2rem;
 }
 
 #footer .footer-wrap .footer-left h1 {
   display: inline;
+  padding-left: 0.5rem;
 }
 
 #footer .footer-wrap .footer-contact {

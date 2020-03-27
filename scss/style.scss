@@ -1,3 +1,4 @@
+@import "mediaqueries";
 @import "buttons";
 @import "utilities";
 @import "mobile";
@@ -12,6 +13,26 @@
   border-color: red;
   border-width: 1px;
 }
+
+// tutaj eksperyment z fontami responsywnymi w procentach i rem
+
+html {
+  font-size: 100%; //czionka 16px
+
+  @include responsive(tab-land) {
+    font-size: 87.5%;   //czionka 14px
+  }
+
+  @include responsive(tab-port) {
+    font-size: 75%; //czionka 12px
+  }
+
+  @include responsive(phone) {
+    font-size: 62.5%; //czionka 10px
+  }
+}
+
+// koniec eksperymentu z fontami responsywnymi w procentach i rem
 
 h1,
 h2,
@@ -49,8 +70,16 @@ body {
   background-color: $grey-lighter2;
 
   .wrapper-grants {
-    @include for-laptop-landscape-down;
     width: 70%;
+
+      @include responsive(tab-land) {
+        width: 80%;
+      }
+
+      @include responsive(tab-port) {
+        width: 90%;
+      }
+
     margin: 0 auto;
     display: flex;
     padding: 2rem 2rem;
@@ -71,11 +100,23 @@ body {
       justify-content: center;
       align-items: flex-start;
 
+      @include responsive(tab-port) {
+        flex-direction: column;
+        align-content: center;
+      }
+
       ul {
         color: $grey-darker4;
         width: 500px;
         list-style: none;
         margin: 0px 15px;
+
+        @include responsive(tab-port) {
+          // max-width: 700px;
+          width: 100%;
+          align-self: center;
+          height: auto;
+        }
 
         li {
           margin-bottom: 1rem;
@@ -88,12 +129,17 @@ body {
             justify-content: flex-start;
             min-height: 240px;
             margin-top: 0;
+
+
             .card-grant-header {
               background-color: $grey;
               display: flex;
+              flex-direction: row;
               justify-content: flex-start;
               padding: 0.7rem;
               margin-top: 0;
+
+          
               svg {
                 width: 18px;
                 color: $grey-lighter3;
@@ -125,7 +171,7 @@ body {
 #lab {
   width: 100%;
   background-color: $grey-darker4;
-  // height: 1000px;
+  // padding: 3rem 0rem;
   display: flex;
   .left-big {
     width: 50%;
@@ -145,7 +191,7 @@ body {
       }
       h1 {
         color: $accent;
-        padding: 0 0.5rem;
+        padding: 3rem 0.5rem;
       }
     }
     .lab-content {
@@ -194,6 +240,8 @@ body {
 }
 
 .card-showcase {
+  
+  
   @extend %card;
   padding: 2rem;
   margin: 2rem 0;
@@ -202,6 +250,17 @@ body {
   background-color: $grey-darker2;
   width: 300px;
   height: 300px;
+  
+  @include responsive(tab-land) {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  //  max-width: 200px;
+   // justify-content: space-around;
+
+  }
+
+  
 
   svg {
     height: 75px;
@@ -240,14 +299,14 @@ body {
   h1 {
     color: $accent;
     text-align: center;
-    margin-bottom: 30px;
+    margin: 1rem;
   }
 
   .cards-all {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    @include for-tablet-down-cards;
+    // @include for-tablet-down-cards;
   }
 }
 .showcase-top {
@@ -279,6 +338,7 @@ nav {
 
     ul {
       display: flex;
+      flex-flow: row wrap;
       list-style: none;
     }
 
@@ -380,6 +440,14 @@ nav {
       flex-direction: row;
       justify-content: space-around;
       padding: 6rem 0;
+
+      @include responsive(tab-port) {
+
+        flex-direction: column;
+        align-items: center;
+
+      }
+
       ul {
         list-style: square;
         color: $grey-lighter3;
@@ -401,10 +469,17 @@ nav {
       }
 
       .did-grafika {
-        padding: 0;
+        padding: 0 3rem;
         svg {
           width: 300px;
-          // margin: 0 auto;
+
+          @include responsive(tab-port) {
+            width: 250px;
+            padding-top: 6rem;
+          }
+          
+
+
         }
       }
     }
@@ -509,15 +584,17 @@ nav {
     .footer-left {
       color: $accent;
       display: flex;
+      align-items: center;
       padding-bottom: 3rem;
       width: 350px;
       svg {
-        height: 40px;
+        height: 3rem;
         display: inline-block;
-        margin-top: 5px;
+        margin-top: 0.2rem;
       }
       h1 {
         display: inline;
+        padding-left: 0.5rem;
       }
     }
 
