@@ -1,9 +1,13 @@
+@import 'mediaqueries';
 @import 'config';
 
 %btn {
     display: inline-block;
     padding: 8px 20px;
     margin: 3px;
+    @include responsive(phone) {
+        width: 50%;
+    }
     &:hover {
         background-color: $grey-lighter3;
         color: $grey-darker3;
