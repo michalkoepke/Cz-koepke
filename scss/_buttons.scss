@@ -6,7 +6,7 @@
     padding: 8px 20px;
     margin: 3px;
     @include responsive(phone) {
-        width: 50%;
+        width: auto;
     }
     &:hover {
         background-color: $grey-lighter3;

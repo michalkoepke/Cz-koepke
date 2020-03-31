@@ -78,6 +78,7 @@ body {
 
     @include responsive(tab-port) {
       width: 90%;
+      padding: 2rem 0;
     }
 
     margin: 0 auto;
@@ -129,6 +130,10 @@ body {
             justify-content: flex-start;
             min-height: 240px;
             margin-top: 0;
+
+            @include responsive(phone) {
+              min-height: auto;
+            }
 
             .card-grant-header {
               background-color: $grey;
@@ -350,22 +355,66 @@ nav {
   right: 0px;
   display: flex;
   justify-content: flex-end;
-  background-color: $grey-darker4;
+  background-color: $grey-darker3;
   width: 100%;
   z-index: 100;
+
+  // @include responsive(phone) {
+
+  //   position: fixed;
+  //   right: 0px;
+  //   height: 100vh;
+  //   // top: 8vh;
+  //   background-color: $grey-darker3;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 72%;
+  //   font-size: 1.7rem;
+
+  // }
 
   .nav-inside {
     margin: 0 auto;
     width: 70%;
-    display: inline-flex;
+    display: flex;
     justify-content: flex-end;
+    background-color: $grey-darker3;
 
+    @include responsive(phone) {
+      position: fixed;
+      right: 0px;
+      height: 93vh;
+      top: 7vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 72%;
+      font-size: 1.7rem;
+      flex-wrap: nowrap;
+      // justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.2s ease-in;
+    }
+
+    
     ul {
       display: flex;
       flex-flow: row wrap;
       list-style: none;
+      
+      @include responsive(phone) {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        text-align: center;
+      }
     }
-
+    
     li {
       padding: 5px 15px;
       margin: 0 10px;
@@ -373,7 +422,7 @@ nav {
         text-decoration: none;
         color: $accent;
       }
-
+      
       a:hover {
         color: $grey-lighter3;
         // border-bottom: 2px;
@@ -382,6 +431,30 @@ nav {
       }
     }
   }
+  
+  .burger {
+    margin: 0.5rem;
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    
+    @include responsive(phone) {
+      display: block;
+      margin: 1rem 2rem;
+    }
+    
+    i {
+      color: $accent;
+    }
+  }
+
+
+  .nav-inside-active {
+    transform: translateX(0%);
+
+  }
+
+
 }
 
 %container {
@@ -433,7 +506,10 @@ nav {
     p1 {
       color: $grey-lighter1-5;
     }
+  }
 
+  .buttons-wrap {
+    display: flex;
   }
 
   @include responsive(tab-port) {
@@ -443,7 +519,7 @@ nav {
   @include responsive(phone) {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -651,7 +727,6 @@ nav {
   padding: 6rem 0;
   background-color: $grey-darker3;
   .footer-wrap {
-
     width: 60%;
     margin: 0 auto;
     color: $grey-lighter1;
@@ -659,11 +734,10 @@ nav {
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: space-between;
-    
+
     @include responsive(tab-land) {
       width: 85%;
     }
-
 
     // @include footer-1400;
 
@@ -692,7 +766,6 @@ nav {
       @include responsive(phone) {
         width: 100%;
       }
-      
 
       h2 {
         color: $accent;
