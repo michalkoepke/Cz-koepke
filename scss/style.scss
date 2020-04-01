@@ -382,6 +382,22 @@ nav {
     justify-content: flex-end;
     background-color: $grey-darker3;
 
+    @include responsive(tab-port) {
+      position: fixed;
+      right: 0px;
+      height: 95vh;
+      top: 5vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      font-size: 1.7rem;
+      flex-wrap: nowrap;
+      transform: translateX(100%);
+      transition: transform 0.2s ease-in;
+    }
+
     @include responsive(phone) {
       position: fixed;
       right: 0px;
@@ -394,7 +410,6 @@ nav {
       width: 72%;
       font-size: 1.7rem;
       flex-wrap: nowrap;
-      // justify-content: space-around;
       transform: translateX(100%);
       transition: transform 0.2s ease-in;
     }
@@ -404,10 +419,19 @@ nav {
       display: flex;
       flex-flow: row wrap;
       list-style: none;
+
+      @include responsive(tab-port) {
+        width: 100%;
+        height: 65%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        text-align: center;
+      }
       
       @include responsive(phone) {
         width: 100%;
-        height: 100%;
+        height: 65%;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: space-around;
@@ -437,6 +461,11 @@ nav {
     display: none;
     font-size: 2rem;
     cursor: pointer;
+
+    @include responsive(tab-port) {
+      display: block;
+      margin: 1rem 2rem;
+    }
     
     @include responsive(phone) {
       display: block;
@@ -447,6 +476,8 @@ nav {
       color: $accent;
     }
   }
+
+  
 
 
   .nav-inside-active {
@@ -510,10 +541,16 @@ nav {
 
   .buttons-wrap {
     display: flex;
+    @include responsive(phone) {
+      width: 100%;
+      justify-content: center;
+
+    }
   }
 
   @include responsive(tab-port) {
     width: 100%;
+    margin-top: 3rem;
   }
 
   @include responsive(phone) {
@@ -726,6 +763,7 @@ nav {
   width: 100%;
   padding: 6rem 0;
   background-color: $grey-darker3;
+  
   .footer-wrap {
     width: 60%;
     margin: 0 auto;
@@ -736,10 +774,14 @@ nav {
     justify-content: space-between;
 
     @include responsive(tab-land) {
-      width: 85%;
+      width: 75%;
     }
 
-    // @include footer-1400;
+    @include responsive(tab-port) {
+      width: 65%;
+    }
+
+   
 
     .footer-left {
       color: $accent;
@@ -763,6 +805,10 @@ nav {
       color: $grey-lighter1;
       margin-top: 5px;
 
+      @include responsive(tab-land) {
+        width: 300px;
+      }
+
       @include responsive(phone) {
         width: 100%;
       }
@@ -782,6 +828,12 @@ nav {
           border-style: none;
           padding: 0.5rem;
           margin-bottom: 5px;
+
+          @include responsive(tab-land) {
+            width: 300px;
+          }
+
+
           @include responsive(phone) {
             width: 100%;
           }
@@ -811,6 +863,11 @@ nav {
           width: 400px;
           margin-bottom: 2px;
           // @include form1400;
+
+          @include responsive(tab-land) {
+            width: 300px;
+          }
+
           @include responsive(phone) {
             width: 100%;
           }
@@ -822,12 +879,18 @@ nav {
     }
 
     .footer-links {
-      // width: 300px;
-      // height: 300px;
-      // background-color: $grey-lighter2;
+      
       color: $grey-lighter1;
       margin-top: 5px;
       margin-left: 25px;
+
+      @include responsive (tab-port) {
+        margin-top: 2rem;
+      }
+
+      @include responsive (phone) {
+        margin-top: 2rem;
+      }
 
       h2 {
         color: $accent;
