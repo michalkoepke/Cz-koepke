@@ -5,14 +5,7 @@
 @import "config";
 @import "utilities";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-color: red;
-  border-width: 1px;
-}
+
 
 // tutaj eksperyment z fontami responsywnymi w procentach i rem
 
@@ -358,6 +351,7 @@ nav {
   background-color: $grey-darker3;
   width: 100%;
   z-index: 100;
+  font-size: 0.85rem;
 
   // @include responsive(phone) {
 
@@ -916,4 +910,247 @@ nav {
       }
     }
   }
+}
+
+
+
+
+
+
+
+// style dla CV ponizej
+
+
+
+
+
+
+
+
+
+
+
+#body-cv {
+  background-color: $grey-lighter3;
+  
+}
+
+#showcase-cv {
+
+  background-color: $grey-lighter3;
+
+}
+
+.showcase-top-cv {
+
+  h2 {
+    font-weight: 600;
+  }
+
+  .wrapper-cv {
+    width: 70%;
+    padding: 2rem;
+    margin: 0 auto;
+    padding-top: 6rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    @include responsive(tab-land) {
+      width: 85%;
+    }
+    @include responsive(tab-port) {
+      display: block;
+    }
+  
+    @include responsive(phone) {
+      width: 95%;
+    }
+  }
+
+  background-color: $grey-lighter3;
+
+
+}
+
+
+.container-left-cv {
+  width: 300px;
+
+  @include responsive(phone) {
+    margin: 0 auto;
+  }
+
+}
+
+.container-right-cv {
+  color: $grey;
+  width: auto;
+  margin-left: 2rem;
+  margin-top: 3rem;
+
+  @include responsive(tab-port) {
+    margin-left: 0;
+  }
+
+
+  .koepke-wrap-cv {
+
+    display: flex;
+    margin-bottom: 10px;
+
+    @include responsive(phone) {
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      padding: 0.7rem;
+    }
+
+    .koepke-cv {
+      width: 50px;
+    }
+  }
+
+  .umk-wrap-cv {
+    display: flex;
+    .umk-cv {
+      width: 40px;
+    }
+
+    p1 {
+     
+      padding: 0.5rem;
+    }
+  }
+
+  .about-cv {
+    margin: 2rem 0rem;
+    
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    @include responsive(phone) {
+      margin: 3rem 0rem;
+    }
+
+    
+  }
+
+  
+
+  @include responsive(tab-port) {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  @include responsive(phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+   
+
+
+  }
+}
+
+
+.showcase-bottom-cv {
+
+
+
+  color: $grey;
+  h2 {
+    font-weight: 600;
+  }
+
+  h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+
+  .wrapper-cv-bottom {
+    width: 70%;
+    padding: 2rem;
+    margin: 0 auto;
+    padding-top: 4rem;
+    margin-bottom: 8rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    @include responsive(tab-port) {
+      padding-top: 0;
+    }
+
+    
+    .content-cv-left {
+      min-width: 305px;
+      border-right: 3px;
+      padding-right: 1rem;
+      border-right-style: solid;
+      border-right-color: $grey-lighter2;
+
+
+      @include responsive(tab-port) {
+        border-right-style: none;
+      }
+
+      hr {
+        border-top: 6px solid $grey;
+
+
+      
+      }
+
+      @include responsive(tab-port) {
+        margin-bottom: 4rem;
+      }
+      
+      
+
+      
+      
+      
+    }
+    
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .content-cv-right {
+      // width: 65%;
+      flex-grow: 2;
+      margin-left: 2rem;
+
+      @include responsive(tab-port) {
+        margin-left: 0;
+      }
+
+      
+      
+    }
+
+
+
+
+    @include responsive(tab-land) {
+      width: 85%;
+    }
+    @include responsive(tab-port) {
+      display: block;
+    }
+  
+    @include responsive(phone) {
+      width: 95%;
+    }
+  }
+  
+
 }

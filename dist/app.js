@@ -28,5 +28,6 @@ const iconToggle = () => {
 }
 
 
+
 navSlide();
 iconToggle();

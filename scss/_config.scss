@@ -11,10 +11,19 @@ $accent: #ff9800;
 
 $font-stack: "Montserrat", sans-serif;
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-color: red;
+    border-width: 1px;
+}
+
 a {
     text-decoration: none;
 }
 
 html {
     scroll-behavior: smooth;
-  }
+}
