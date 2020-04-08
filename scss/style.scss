@@ -5,8 +5,6 @@
 @import "config";
 @import "utilities";
 
-
-
 // tutaj eksperyment z fontami responsywnymi w procentach i rem
 
 html {
@@ -408,7 +406,6 @@ nav {
       transition: transform 0.2s ease-in;
     }
 
-    
     ul {
       display: flex;
       flex-flow: row wrap;
@@ -422,7 +419,7 @@ nav {
         justify-content: space-around;
         text-align: center;
       }
-      
+
       @include responsive(phone) {
         width: 100%;
         height: 65%;
@@ -432,7 +429,7 @@ nav {
         text-align: center;
       }
     }
-    
+
     li {
       padding: 5px 15px;
       margin: 0 10px;
@@ -440,7 +437,7 @@ nav {
         text-decoration: none;
         color: $accent;
       }
-      
+
       a:hover {
         color: $grey-lighter3;
         // border-bottom: 2px;
@@ -449,7 +446,7 @@ nav {
       }
     }
   }
-  
+
   .burger {
     margin: 0.5rem;
     display: none;
@@ -460,26 +457,20 @@ nav {
       display: block;
       margin: 1rem 2rem;
     }
-    
+
     @include responsive(phone) {
       display: block;
       margin: 1rem 2rem;
     }
-    
+
     i {
       color: $accent;
     }
   }
 
-  
-
-
   .nav-inside-active {
     transform: translateX(0%);
-
   }
-
-
 }
 
 %container {
@@ -538,7 +529,6 @@ nav {
     @include responsive(phone) {
       width: 100%;
       justify-content: center;
-
     }
   }
 
@@ -757,7 +747,7 @@ nav {
   width: 100%;
   padding: 6rem 0;
   background-color: $grey-darker3;
-  
+
   .footer-wrap {
     width: 60%;
     margin: 0 auto;
@@ -772,10 +762,12 @@ nav {
     }
 
     @include responsive(tab-port) {
-      width: 65%;
+      width: 85%;
     }
 
-   
+    @include responsive(phone) {
+      width: 90%;
+    }
 
     .footer-left {
       color: $accent;
@@ -827,7 +819,6 @@ nav {
             width: 300px;
           }
 
-
           @include responsive(phone) {
             width: 100%;
           }
@@ -873,16 +864,15 @@ nav {
     }
 
     .footer-links {
-      
       color: $grey-lighter1;
       margin-top: 5px;
       margin-left: 25px;
 
-      @include responsive (tab-port) {
+      @include responsive(tab-port) {
         margin-top: 2rem;
       }
 
-      @include responsive (phone) {
+      @include responsive(phone) {
         margin-top: 2rem;
       }
 
@@ -912,37 +902,17 @@ nav {
   }
 }
 
-
-
-
-
-
-
 // style dla CV ponizej
-
-
-
-
-
-
-
-
-
-
 
 #body-cv {
   background-color: $grey-lighter3;
-  
 }
 
 #showcase-cv {
-
   background-color: $grey-lighter3;
-
 }
 
 .showcase-top-cv {
-
   h2 {
     font-weight: 600;
   }
@@ -961,17 +931,14 @@ nav {
     @include responsive(tab-port) {
       display: block;
     }
-  
+
     @include responsive(phone) {
       width: 95%;
     }
   }
 
   background-color: $grey-lighter3;
-
-
 }
-
 
 .container-left-cv {
   width: 300px;
@@ -979,7 +946,6 @@ nav {
   @include responsive(phone) {
     margin: 0 auto;
   }
-
 }
 
 .container-right-cv {
@@ -992,9 +958,7 @@ nav {
     margin-left: 0;
   }
 
-
   .koepke-wrap-cv {
-
     display: flex;
     margin-bottom: 10px;
 
@@ -1019,14 +983,13 @@ nav {
     }
 
     p1 {
-     
       padding: 0.5rem;
     }
   }
 
   .about-cv {
     margin: 2rem 0rem;
-    
+
     h2 {
       margin-bottom: 1rem;
     }
@@ -1034,11 +997,7 @@ nav {
     @include responsive(phone) {
       margin: 3rem 0rem;
     }
-
-    
   }
-
-  
 
   @include responsive(tab-port) {
     width: 100%;
@@ -1049,18 +1008,10 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-   
-
-
   }
 }
 
-
 .showcase-bottom-cv {
-
-
-
   color: $grey;
   h2 {
     font-weight: 600;
@@ -1070,7 +1021,6 @@ nav {
     font-weight: 600;
     margin-bottom: 1rem;
   }
-
 
   .wrapper-cv-bottom {
     width: 70%;
@@ -1086,7 +1036,6 @@ nav {
       padding-top: 0;
     }
 
-    
     .content-cv-left {
       min-width: 305px;
       border-right: 3px;
@@ -1094,29 +1043,19 @@ nav {
       border-right-style: solid;
       border-right-color: $grey-lighter2;
 
-
       @include responsive(tab-port) {
         border-right-style: none;
       }
 
       hr {
         border-top: 6px solid $grey;
-
-
-      
       }
 
       @include responsive(tab-port) {
         margin-bottom: 4rem;
       }
-      
-      
-
-      
-      
-      
     }
-    
+
     ul {
       list-style: none;
       li {
@@ -1132,13 +1071,7 @@ nav {
       @include responsive(tab-port) {
         margin-left: 0;
       }
-
-      
-      
     }
-
-
-
 
     @include responsive(tab-land) {
       width: 85%;
@@ -1146,11 +1079,150 @@ nav {
     @include responsive(tab-port) {
       display: block;
     }
-  
+
     @include responsive(phone) {
       width: 95%;
     }
   }
-  
+}
 
+// style dla sekcji PUBLICATIONS
+
+#body-pubs {
+  background-color: $grey-lighter2;
+
+  // @include responsive(phone) {
+
+  //   ::-webkit-scrollbar {
+  //     width: 10px;
+  //     margin-left: 5px;
+  //   }
+
+  //   /* Track */
+
+  //   ::-webkit-scrollbar-track {
+  //     background: $accent;
+  //   }
+
+  //   /* Handle */
+
+  //   ::-webkit-scrollbar-thumb {
+  //     background: #6c96aa;
+  //     height: 120px;
+  //   }
+
+  //   /* Handle on hover */
+
+  //   ::-webkit-scrollbar-thumb:hover {
+  //     background: #81b4cc;
+  //   }
+  // }
+
+  #showcase-pubs {
+    .showcase-top-pubs {
+      // background-color: $grey-lighter1-5;
+
+      .wrapper-pubs {
+        width: 70%;
+        padding: 2rem;
+        margin: 0 auto;
+        padding-top: 7rem;
+        padding-bottom: 6rem;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+
+        h1 {
+          color: $grey-darker3;
+          text-align: center;
+        }
+
+        @include responsive(tab-land) {
+          width: 85%;
+        }
+        @include responsive(tab-port) {
+          display: block;
+        }
+
+        @include responsive(phone) {
+          width: 95%;
+        }
+      }
+    }
+  }
+
+  .showcase-bottom-pubs {
+    width: 100%;
+
+    .wrapper-pubs-bottom {
+      width: 70%;
+      padding: 2rem;
+      margin: 0 auto;
+      padding-top: 0rem;
+      margin-bottom: 8rem;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      @include responsive(tab-land) {
+        width: 85%;
+      }
+      @include responsive(tab-port) {
+        padding-top: 0;
+        width: 95%;
+      
+      }
+
+      @include responsive(phone) {
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0rem;
+      }
+
+      ol {
+        list-style: decimal;
+        list-style-position: inside;
+        width: 95%;
+        margin: 0 auto;
+
+        li {
+          padding: 1.5rem;
+          margin: 0.5rem;
+          background-color: $grey-lighter3;
+          color: $grey-darker1;
+          width: 100%;
+          font-weight: 600;
+
+          @include responsive (phone) {
+            margin: 0.5rem 0rem;
+          }
+
+          p2 {
+            font-size: 1.1rem;
+          }
+
+          h3 {
+            margin-bottom: 1rem;
+
+            strong {
+              font-weight: 600;
+            }
+          }
+
+          p1 {
+            font-weight: 400;
+          }
+
+          .btn-tertiary {
+            display: block;
+            width: fit-content;
+            margin-top: 1rem;
+            font-weight: 400;
+            color: $grey-darker1;
+          }
+        }
+      }
+    }
+  }
 }

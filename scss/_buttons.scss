@@ -31,3 +31,14 @@
     background-color: $grey-lighter2;
     
 }
+
+.btn-tertiary {
+    @extend %btn;
+    background-color: $grey-lighter2;
+
+    &:hover {
+        background-color: $accent;
+        color: $grey-darker3;
+    }
+    
+}

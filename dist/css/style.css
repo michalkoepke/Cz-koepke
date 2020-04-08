@@ -16,24 +16,24 @@ html {
   scroll-behavior: smooth;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary, .btn-secondary, .btn-tertiary {
   display: inline-block;
   padding: 8px 20px;
   margin: 3px;
 }
 
 @media only screen and (max-width: 600px) {
-  .btn-primary, .btn-secondary {
+  .btn-primary, .btn-secondary, .btn-tertiary {
     width: auto;
   }
 }
 
-.btn-primary:hover, .btn-secondary:hover {
+.btn-primary:hover, .btn-secondary:hover, .btn-tertiary:hover {
   background-color: #eceff1;
   color: #1c262a;
 }
 
-.btn-primary a, .btn-secondary a {
+.btn-primary a, .btn-secondary a, .btn-tertiary a {
   color: #1c262a;
   font-family: "Montserrat", sans-serif;
 }
@@ -44,6 +44,15 @@ html {
 
 .btn-secondary {
   background-color: #cfd8dc;
+}
+
+.btn-tertiary {
+  background-color: #cfd8dc;
+}
+
+.btn-tertiary:hover {
+  background-color: #ff9800;
+  color: #1c262a;
 }
 
 * {
@@ -1170,7 +1179,13 @@ nav .nav-inside-active {
 
 @media only screen and (max-width: 900px) {
   #footer .footer-wrap {
-    width: 65%;
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #footer .footer-wrap {
+    width: 90%;
   }
 }
 
@@ -1575,4 +1590,138 @@ nav .nav-inside-active {
   .showcase-bottom-cv .wrapper-cv-bottom {
     width: 95%;
   }
+}
+
+#body-pubs {
+  background-color: #cfd8dc;
+}
+
+#body-pubs #showcase-pubs .showcase-top-pubs .wrapper-pubs {
+  width: 70%;
+  padding: 2rem;
+  margin: 0 auto;
+  padding-top: 7rem;
+  padding-bottom: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#body-pubs #showcase-pubs .showcase-top-pubs .wrapper-pubs h1 {
+  color: #1c262a;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  #body-pubs #showcase-pubs .showcase-top-pubs .wrapper-pubs {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #body-pubs #showcase-pubs .showcase-top-pubs .wrapper-pubs {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #body-pubs #showcase-pubs .showcase-top-pubs .wrapper-pubs {
+    width: 95%;
+  }
+}
+
+#body-pubs .showcase-bottom-pubs {
+  width: 100%;
+}
+
+#body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom {
+  width: 70%;
+  padding: 2rem;
+  margin: 0 auto;
+  padding-top: 0rem;
+  margin-bottom: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 1400px) {
+  #body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom {
+    padding-top: 0;
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0rem;
+  }
+}
+
+#body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom ol {
+  list-style: decimal;
+  list-style-position: inside;
+  width: 95%;
+  margin: 0 auto;
+}
+
+#body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom ol li {
+  padding: 1.5rem;
+  margin: 0.5rem;
+  background-color: #eceff1;
+  color: #37474f;
+  width: 100%;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  #body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom ol li {
+    margin: 0.5rem 0rem;
+  }
+}
+
+#body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom ol li p2 {
+  font-size: 1.1rem;
+}
+
+#body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom ol li h3 {
+  margin-bottom: 1rem;
+}
+
+#body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom ol li h3 strong {
+  font-weight: 600;
+}
+
+#body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom ol li p1 {
+  font-weight: 400;
+}
+
+#body-pubs .showcase-bottom-pubs .wrapper-pubs-bottom ol li .btn-tertiary {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1rem;
+  font-weight: 400;
+  color: #37474f;
 }
