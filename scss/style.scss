@@ -19,7 +19,10 @@ html {
   }
 
   @include responsive(phone) {
-    font-size: 62.5%; //czionka 10px
+
+    font-size:75%;
+
+    // font-size: 62.5%; //czionka 10px
   }
 }
 
@@ -693,13 +696,14 @@ nav {
     }
 
     table {
-      border-collapse: collapse;
+      border-collapse: separate; 
       width: 100%;
       text-align: left;
       font-size: 1rem;
       // border-spacing: 3px;
       margin: 2rem 0;
       box-shadow: 10px 10px 35px 0px rgba(0, 0, 0, 0.08);
+      
 
       tr {
         padding: 0.7rem;
@@ -707,10 +711,20 @@ nav {
         color: $grey-lighter3;
         // margin: 2px 0px;
         // border-spacing: 10px 0px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: $grey;
+        // border-style: solid;
+        // border-width: 1px;
+        // border-color: $grey;
 
+        @include responsive (phone) {
+          padding: 3rem 0rem;
+          margin: 3rem;
+          // color: $accent;
+
+        }
+
+        
+        
+        
         th {
           font-weight: 400;
           text-align: left;
@@ -719,16 +733,31 @@ nav {
           background-color: $grey-lighter2;
           color: $grey-darker4;
           // border-spacing: 5px;
+          
+          @include responsive (phone) {
+            display: none;
+            
+          }
         }
-
+        
         td {
           padding: 1.2rem;
           // border-spacing: 5px;
+          
+          @include responsive (phone) {
+            display: block;
+            padding: 0.5rem 1rem;
+
+            
+          }
           a {
             color: $accent;
             text-decoration: none;
           }
         }
+
+        
+
       }
     }
   }
@@ -1119,6 +1148,34 @@ nav {
   // }
 
   #showcase-pubs {
+
+
+    .wrapper-standart {
+      width: 70%;
+      padding: 2rem;
+      margin: 0 auto;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+
+      h1 {
+        color: $grey-darker3;
+        text-align: center;
+      }
+
+      @include responsive(tab-land) {
+        width: 85%;
+      }
+      @include responsive(tab-port) {
+        display: block;
+      }
+
+      @include responsive(phone) {
+        width: 95%;
+      }
+    }
     .showcase-top-pubs {
       // background-color: $grey-lighter1-5;
 
@@ -1146,6 +1203,8 @@ nav {
 
         @include responsive(phone) {
           width: 95%;
+          padding-top: 8rem;
+          padding-bottom: 3rem;
         }
       }
     }
@@ -1161,6 +1220,7 @@ nav {
       padding-top: 0rem;
       margin-bottom: 8rem;
       display: flex;
+      flex-direction: column;
       flex-wrap: nowrap;
       justify-content: space-between;
 
@@ -1188,14 +1248,14 @@ nav {
 
         li {
           padding: 1.5rem;
-          margin: 0.5rem;
+          margin-bottom: 0.5rem;
           background-color: $grey-lighter3;
           color: $grey-darker1;
           width: 100%;
           font-weight: 600;
 
           @include responsive (phone) {
-            margin: 0.5rem 0rem;
+            margin-bottom: 0.5rem;
           }
 
           p2 {
